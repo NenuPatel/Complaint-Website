@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>main complain page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%); */
+            background-color: black;
+        }
+
+        /* ////////////////////////////// THIS IS FOR HEADER //////////////////////////////////// */
+
+        header {
+            border-bottom: 2px solid rgb(253, 198, 18);
+            ;
+        }
+
+        .block {
+            /* background-color: rgb(253, 198, 18); */
+            /* background-color: rgb(8, 22, 121); */
+            height: 30px;
+            /* background-color: #ea8b0e; */
+            background-color: rgb(253, 198, 18);
+            ;
+        }
+
+        .symbol {
+            display: inline-block;
+
+        }
+
+        #logo {
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            height: 100px;
+            margin-bottom: 5px;
+        }
+
+        .symbol #name {
+            font-family: serif;
+            color: white;
+            display: inline-block;
+            font-size: 25px;
+            position: absolute;
+            top: 75px;
+            margin-left: 10px;
+        }
+
+        .navbar {
+            display: inline-block;
+            /* background-color: rgb(8, 22, 121); */
+            /* background-color: rgb(253, 198, 18); */
+            position: absolute;
+            /* right: 500px; */
+            right: 175px;
+            top: 100px;
+
+            font-size: 25px;
+            /* border-right: 2px solid black; */
+
+        }
+
+        .navbar a {
+            font-family: serif;
+            padding: 0px 30px;
+            /* border: 2px solid black; */
+            /* color: black; */
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            filter: drop-shadow(0px 0px 10px rgb(253, 198, 18));
+            background-color: rgb(253, 198, 18);
+            border-radius: 10px;
+            color: black;
+        }
+
+        /* ///////////////////////////////this is for main content////////////////////////////////////// */
+
+        .details {
+            /* width: 500px;
+            background-color: rgb(253, 198, 18); */
+            position: absolute;
+            top: 23%;
+            right: 10%;
+            border-radius: 30px;
+        }
+
+        form {
+        font-family: serif;
+        font-size: larger;
+        width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 10px solid #ccc;
+        background-color: rgb(236, 210, 124);
+      }
+      
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      
+      input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      h1{
+        text-align: center;
+        color: white;
+      }
+
+
+      .submit-btn{
+        background: rgb(253, 198, 18);
+        color: black;
+        padding: 10px 20px;
+        margin-left: 15px;
+        border: 2px solid rgb(101, 99, 99);
+        cursor: pointer;
+        width: 45%;
+        
+      }
+
+      input[type="reset"] {
+        background: rgb(253, 198, 18);
+        color: black;
+        margin: 10px;
+        margin-left: px;
+        padding: 10px 20px;
+        border: 2px solid rgb(101, 99, 99);
+        cursor: pointer;
+        width: 45%;
+        
+      }
+      
+      input[type="radio"]{
+        width: 20px;
+      } 
+
+      #address, #description {
+        width: 95%;
+      }
+
+      #image{
+        width: 40%;
+        margin: 3px;
+      }
+
+      .vector-img img{
+        width: 400px;
+        margin-left: 150px;
+        margin-top: 60px;
+      }
+
+      .quote{
+        font-family: serif;
+        font-size: 20px;
+        /* border: 2px solid silver; */
+        width: 600px;
+        color: white;
+        padding: 10px 10px;
+        /* margin-top: 40px; */
+        margin-left: 50px;
+      }
+
+      .popup{
+        width: 400px;
+        background: white;
+        border-radius: 5px;
+        position: absolute;
+        top: 40%;
+        left: -10%;
+        transform: translate(-50%,-50%) scale(0.1);
+        text-align: center;
+        padding: 0px 30px 30px;
+        color: black;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+      }
+
+      .open-popup{
+        visibility: visible;
+        top: 40%;
+        transform: translate(-50%,-50%) scale(1);
+      }
+      .popup img{
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 50%;
+      }
+
+      .popup h2{
+        font-size: 38px;
+        font-family: serif;
+        font-weight: 500;
+        margin: 30px 0px 10px;
+      }
+
+      .popup button{
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px 0;
+        background: yellow;
+        color: black;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+
+        /* //////////////////////////// THIS IS FOR FOOTER/////////////////////////////////////////////// */
+        footer {
+            /* background-color: #fbb147; */
+            background-color: rgb(253, 198, 18);
+            /* background-color: rgb(8, 22, 121); */
+
+            color: black;
+            /* color: white; */
+            margin-top: 32px;
+            /* position: absolute; */
+
+        }
+
+        #copyright {
+            padding-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #thanks {
+            padding-bottom: 10px;
+            display: inline-block
+        }
+
+        #feedback {
+            position: absolute;
+            right: 0px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ///////////////////////////////////////////////this is header///////////////////////////////////////// -->
+    <header>
+        <div class="block">
+
+        </div>
+
+        <div class="symbol">
+            <img src="logo.jpg" alt="LOGO" id="logo">
+
+            <p id="name">PROTEST PAVEMENT</p>
+        </div>
+
+        <div class="navbar">
+
+            <a href="home.html">home</a>
+            <a href="contact2.html">contacts</a>
+            <a href="aboutus2.html">about us</a>
+            <a href="help.html">help</a>
+
+        </div>
+
+    </header>
+
+    <!-- ////////////////////////////////////////////// this is main content /////////////////////////////// -->
+
+    <div class="vector-img">
+        <img src="images/complain/flyovervector.jpg" alt="">
+    </div>
+
+    <div class="quote">
+        <h2></h2>
+       <p> "Damaged flyovers pose risks to safety, traffic flow, and structural integrity, impacting citizens' daily lives. Regular inspections and timely maintenance are crucial for accident prevention. Citizen awareness and vigilance are vital in identifying and reporting potential dangers, fostering safer roadways. A proactive approach, emphasizing the importance of flyover maintenance, is a shared responsibility. Swift action by authorities ensures these symbols of progress remain safe and functional, enhancing city infrastructure. Together, we contribute to creating secure road networks for the well-being of all citizens."</p>
+    </div>
+
+    <div class="details">
+
+        <h1>Bridge Complain Box</h1>
+        <form action="bridgedatabase.php" method="post">
+          
+          <tr>
+            <td><label>name: </label></td>
+            <td><input type="text" placeholder="enter your full name" name="name" id="name" ></td>
+        </tr>
+        <br>
+
+          <tr>
+              <td><label>Mobile No: </label></td>
+              <td><input type="text" placeholder="enter your mobile noumber" name="mobile" id="mobile" ></td>
+          </tr>
+          <br>
+
+          <tr>
+              <td><label>Date of Complain: </label></td>
+              <td><input type="date" placeholder="Date of complain" name="doc" id="doc" ></td>
+          </tr>
+            <br>
+
+            <tr>
+            <td><label for="districtselect">Choose a District:</label></td>
+            <td><select name="district" id="districtselect"></td>
+                <option value="">--Please choose an option--</option>
+                <option value="GIR SOMNATH">GIR SOMNATH</option>
+                <option value="BHAVNAGAR">BHAVNAGAR</option>
+                <option value="JUNAGADH">JUNAGADH</option>
+                <option value="AHMEDABAD">AHMEDABAD</option>
+                <option value="SURAT">SURAT</option>
+            </select>
+            </tr>
+            <br>
+
+            <tr>
+            <td><label for="cityselect">Choose a City:</label></td>
+            <td><select name="taluka" id="cityselect"></td>
+                <option value="">--Please choose an option--</option>
+                <option value="BHAVNAGAR">BHAVNAGAR</option>
+                <option value="PALITANA">PALITANA</option>
+                <option value="SIHOR">SIHOR</option>
+                <option value="GHOGHA">GHOGHA</option>
+                <option value="MAHUVA">MAHUVA</option>
+            </select>
+            </tr>
+            <br>
+
+            <tr>
+                <td><label>Address:</label></td>
+                <td><textarea name="address" id="address"></textarea></td>
+            </tr>
+            <br>
+
+            <tr>
+                <td><label>Add some description:</label></td>
+                <td><textarea name="description" id="description"></textarea></td>
+            </tr>
+            <br>
+
+            <tr>
+                <td><label>Upload image</label></td>
+                <td><input type="file" accept="image/png, image/jpg" name="image" id="image"></td>
+            </tr>
+            <br>
+
+            <tr>
+                <td><button type="submit" value="submit" class="submit-btn" onclick="openpopup()"> submit </button>
+                
+                    
+                    <td><input type="reset" value="reset" /></td>
+                </tr>
+                
+            </form>
+            
+            <!-- <div class="popup" id="popup">
+                <img src="images/popup/check mark1.png" alt="">
+                <h2>Thank You!</h2>
+                <p>your complainhas been successfully submitted.</p>
+                <button type="button" onclick="closepopup()">OK</button>
+            </div> -->
+
+           <script>
+
+            function openpopup(){
+              var name = document.getElementById("name").value;
+              var mobile = document.getElementById("mobile").value;
+              var date = document.getElementById("doc").value;
+              var district = document.getElementById("districtselect").value;
+              var city = document.getElementById("cityselect").value;
+              var address = document.getElementById("address").value;
+              var description = document.getElementById("description").value;
+              var image = document.getElementById("image").value;
+
+              if( name=="" || mobile=="" || date=="" || district=="" || city=="" || address=="" || description=="" || image==""){
+                alert("please enter all the information....");
+                 return;
+              }
+              else{
+                window.location.assign("home.html");
+                alert("your complain is successfully registered.");
+                
+                
+              }
+
+            }
+
+           </script>
+
+    </div>
+
+    <!-- //////////////////////////////////////////////this is footer //////////////////////////////// -->
+
+    <footer class="footer">
+        <p id="copyright">&copy;2023 All rights reserved.</p>
+        <br>
+        <p id="thanks">thanks for visiting our site.</p>
+        <a href="feedback.html" id="feedback">give us your feedback</a>
+    </footer>
+
+</body>
+
+</html>
